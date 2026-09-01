@@ -110,7 +110,7 @@ public class Workshop {
             fubonacci[i] = fibonacci[i + 1] + fibonacci[i + 2];
         }
 
-        return new int[0];
+        return fibonacci;
     }
 
     // Método que suma todos los elementos de un arreglo
