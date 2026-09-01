@@ -49,11 +49,11 @@ public class Workshop {
         // Lanzar IllegalArgumentException si n es negativo.
         
         if (n < 0){
-            throw new IllegalArgumentException("El numero no puede ser negativo");
+            throw new IllegalArgumentException("El número no puede ser negativo");
         }
         
         int resultado = 1;
-        for(int i = 1; i < n; i++){
+        for(int i = 1; i <= n; i++){
             resultado *= i;
         }
         return resultado;
