@@ -14,7 +14,7 @@ public class Workshop {
     }
 
     // Método que encuentra el mayor de tres números enteros
-    public int mayorDeTresNumeros(int a, int b, int c)
+    public int mayorDeTresNumeros(int a, int b, int c){
         return 0;
 
       if (a>= b && a >=c)
@@ -28,6 +28,7 @@ public class Workshop {
       else
 
         return c;
+      }
         
     }
 
