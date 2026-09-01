@@ -90,7 +90,7 @@ public class Workshop {
         // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
         // Lanzar IllegalArgumentException si n es negativo.
         if(n < 0){
-           throw new IllegalArgumentException("n No puede ser negativo")
+           throw new IllegalArgumentException("n No puede ser negativo");
         }
         
         int[] fibonacci = new int[n];
@@ -106,8 +106,8 @@ public class Workshop {
            fibonacci[1] = 1;
         }
 
-        for(int i = 1;i <= n; i++){
-            fubonacci[i] = fibonacci[i + 1] + fibonacci[i + 2];
+        for(int i = 2;i < n; i++){
+            fubonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
         }
 
         return fibonacci;
