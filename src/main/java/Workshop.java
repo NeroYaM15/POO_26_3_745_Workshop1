@@ -107,7 +107,7 @@ public class Workshop {
         }
 
         for(int i = 2;i < n; i++){
-            fubonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
         }
 
         return fibonacci;
