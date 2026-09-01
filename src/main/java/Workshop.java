@@ -98,12 +98,16 @@ public class Workshop {
            return fibonacci;
         }
 
+        if(n >= 1){
+           fibonacci[0] = 0;
+        }
+
         if(n >= 2){
            fibonacci[1] = 1;
         }
 
         for(int i = 1;i <= n; i++){
-
+            fubonacci[i] = fibonacci[i + 1] + fibonacci[i + 2];
         }
 
         return new int[0];
