@@ -63,7 +63,21 @@ public class Workshop {
     public boolean esPrimo(int numero) {
         // TODO: Implementar el método para verificar si un número es primo.
         // Ejemplo: Si numero = 7, el resultado debería ser true.
+        if(numero < 2){
+           return false;
+        }
+
+        if(numero == 2){
         return false;
+        }
+        
+        for(int i = 3;i <= Math.sqrt(numero); i += 2){
+            if(numero % i == 0){
+               return false;
+            }
+        }
+        
+        return true;
     }
 
     // Método que genera una serie de Fibonacci
