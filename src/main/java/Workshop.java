@@ -134,10 +134,13 @@ public class Workshop {
         return 0.0;
         }
   
-        int suma = 0
-        for (int i = 0; i < arreglo; i++){
-            suma += arreglo[i]
+        int suma = 0;
+        for (int i = 0; i < arreglo.length; i++){
+            suma += arreglo[i];
         }
+           
+        double promedio = (double)suma / arreglo.length;
+        return promedio;
     }
 
     // Método que encuentra el elemento mayor en un arreglo
