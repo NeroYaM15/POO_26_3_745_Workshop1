@@ -147,15 +147,15 @@ public class Workshop {
     public int encontrarElementoMayor(int[] arreglo) {
         // TODO: Implementar el método para encontrar el elemento mayor en un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 5.
-        int mayor  arreglo[0];
+        int mayor = arreglo[0];
         
-        for(int i = 1;1 < arreglo.length; i++){
-            if(arreglo[1] > mayor){
-               mayor = arreglo[1];
+        for(int i = 1;i < arreglo.length; i++){
+            if(arreglo[i] > mayor){
+               mayor = arreglo[i];
             }
         }
 
-        return 0;
+        return mayor;
     }
 
     // Método que encuentra el elemento menor en un arreglo
