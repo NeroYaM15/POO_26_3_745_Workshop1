@@ -164,8 +164,8 @@ public class Workshop {
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 1.
         int menor = arreglo[0];
          
-        for(int i = 1;i < arreglo.length; i--){
-            int(arreglo[i] < menor){
+        for(int i = 1;i < arreglo.length; i++){
+            if(arreglo[i] < menor){
                 menor = arreglo[i];
             }
         }
