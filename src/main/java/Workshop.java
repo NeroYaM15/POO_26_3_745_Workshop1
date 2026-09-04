@@ -258,7 +258,7 @@ public class Workshop {
         if (cadena == null){
             return 0;
         }
-        return cadena.length();
+        return cadena.toCharArray().length;
     }
 
     // Método que invierte una cadena
