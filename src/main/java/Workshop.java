@@ -255,11 +255,11 @@ public class Workshop {
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-      int contador = 0;
-      for (char c : cadena.toCharArray()){
-         contador++;
-      }
-      return contador;
+     // int contador = 0;
+     // for (char c : cadena.toCharArray()){
+        // contador++;
+     // }
+      return 0;
     }
 
     // Método que invierte una cadena
@@ -269,7 +269,10 @@ public class Workshop {
         if (cadena == null){
             return null;
         }
-        return new StringBuilder(cadena).reverse().toString();
+        String invertida = "";
+        for (int i = cadena.length() - 1;1 >= 0; i--){
+            invertida += cadena.charAt(i);
+        }
     }
 
     // Método que verifica si una cadena es un palíndromo
