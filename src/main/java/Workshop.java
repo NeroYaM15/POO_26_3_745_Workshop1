@@ -258,7 +258,11 @@ public class Workshop {
         if (cadena == null){
             return 0;
         }
-        return cadena.toCharArray().length;
+        int contador = 0;
+        for (char c : cadena.toCharArray()){
+            contador++;
+        }
+        return contador;
     }
 
     // Método que invierte una cadena
