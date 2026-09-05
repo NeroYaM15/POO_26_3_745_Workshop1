@@ -256,7 +256,7 @@ public class Workshop {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
       int contador = 0;
-      for (int i = 0; i < cadena.length(); i++){
+      for (char c : cadena.toCharArray()){
          contador++;
       }
       return contador;
