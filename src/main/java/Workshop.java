@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class Workshop {
     public static void main(String[] args) {
@@ -263,23 +264,29 @@ public class Workshop {
     }
 
     // Método que invierte una cadena
-    public String invertirCadena(String cadena) {
+    public int invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-        if (cadena == null){
-            return null;
-        }
-        String invertida = "";
-        for (int i = cadena.length() - 1;1 >= 0; i--){
-            invertida += cadena.charAt(i);
-        }
+      //  if (cadena == null){
+
+        //}
+       // String invertida = "";
+        //for (int i = cadena.length() - 1;1 >= 0; i--){
+          //  invertida += cadena.charAt(i);
+       // }
+        return 0;
     }
 
     // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        return false;
+        if (cadena == null){
+            return false;
+        }
+        String normalizada = cadena.toLowerCase().replaceAll("\\s +","");
+        String invertida = new StringBuilder(normalizada).reverse().toString();
+        return normalizada.equals(invertida);
     }
 
     // Método que cuenta el número de palabras en una cadena
