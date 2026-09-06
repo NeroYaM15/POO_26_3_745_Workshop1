@@ -366,12 +366,12 @@ public class Workshop {
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        if (numero == 0){
-            return  "0";
+        if (numero == 0) {
+            return "0";
         }
         StringBuilder binario = new StringBuilder();
         int n = numero;
-        while (n > 0){
+        while (n > 0) {
             binario.insert(0, n % 2);
             n = n / 2;
         }
