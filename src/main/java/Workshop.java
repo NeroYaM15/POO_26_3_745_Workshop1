@@ -280,7 +280,7 @@ public class Workshop {
         if (cadena == null){
             return false;
         }
-        String normalizada = cadena.toLowerCase().replaceAll("\\s +","");
+        String normalizada = cadena.toLowerCase().replaceAll("\\s+","");
         String invertida = new StringBuilder(normalizada).reverse().toString();
         return normalizada.equals(invertida);
     }
@@ -289,7 +289,11 @@ public class Workshop {
     public int contarPalabras(String cadena) {
         // TODO: Implementar el método para contar el número de palabras en una cadena.
         // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
-        return 0;
+        if (cadena == null || cadena.trim().isEmpty()){
+            return 0;
+        }
+        String[] Palabras = cadena.trim().split("\\s+");
+        return Palabras.length;
     }
 
     // Método que convierte una cadena a mayúsculas
