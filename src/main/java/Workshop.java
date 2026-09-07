@@ -8,7 +8,7 @@ public class Workshop {
     }
 
     // Método que suma dos números enteros
-    public int sumarDosNumeros(int a, int b) {
+    public int  sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
         return a+b;
@@ -237,19 +237,23 @@ public class Workshop {
     public int[] rotarArreglo(int[] arreglo, int posiciones) {
         // TODO: Implementar el método para rotar un arreglo n posiciones.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5] y posiciones = 2, el resultado debería ser [3, 4, 5, 1, 2].
-        if(arreglo == null || arreglo.length == 0){
+        if (arreglo == null || arreglo.length == 0) {
             return arreglo;
         }
-        int longitud = arreglo.length;
-        int rotacionEfctiva = posiciones % longitud;
 
-        if(rotacionEfctiva < 0){
-            rotacionEfctiva += longitud;
+        int n = arreglo.length;
+        int k = posiciones % n;
+        if (k < 0) {
+            k += n;
         }
-        int[] resultado = new  int[longitud];
-        System.arraycopy(arreglo, rotacionEfctiva, resultado,0,longitud - rotacionEfctiva );
-        System.arraycopy(arreglo, 0, resultado, longitud - rotacionEfctiva, rotacionEfctiva);
+
+        int[] resultado = new int[n];
+        for (int i = 0; i < n; i++) {
+            resultado[(i + k) % n] = arreglo[i];
+        }
+
         return resultado;
+
     }
 
     // Método que cuenta los caracteres en una cadena
