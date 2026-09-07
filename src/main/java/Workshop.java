@@ -256,10 +256,10 @@ public class Workshop {
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-     // int contador = 0;
-     // for (char c : cadena.toCharArray()){
-        // contador++;
-     // }
+      int contador = 0;
+      for (char c : cadena.toCharArray()){
+         contador++;
+      }
       return 0;
     }
 
@@ -366,34 +366,27 @@ public class Workshop {
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
-        if (numero == 0) {
-            return "0";
-        }
-        StringBuilder binario = new StringBuilder();
-        int n = numero;
-        while (n > 0) {
-            binario.insert(0, n % 2);
-            n = n / 2;
-        }
-        return binario.toString();
+        if (numero < 0) return "-" + Integer.toBinaryString(-numero);
+        return Integer.toBinaryString(numero);
     }
 
     // Método que convierte un número en su representación hexadecimal
     public String convertirAHexadecimal(int numero) {
         // TODO: Implementar el método para convertir un número en su representación hexadecimal.
         // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-        if (numero == 0) {
-            return "0";
-        }
-        String digitos = "0123456789ABCDEF";
-        StringBuilder hexadecimal = new StringBuilder();
-        int n = numero;
-        while (n > 0) {
-            int residuo = n % 16;
-            hexadecimal.insert(0, digitos.charAt(residuo));
-            n = n / 16;
-        }
-        return hexadecimal.toString();
+            if (numero == 0) {
+                return "0";
+            }
+            String digitos = "0123456789ABCDEF";
+            StringBuilder hexadecimal = new StringBuilder();
+            int n = numero;
+            while (n > 0) {
+                int residuo = n % 16;
+                hexadecimal.insert(0, digitos.charAt(residuo));
+                n = n / 16;
+            }
+            return hexadecimal.toString();
+
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
@@ -405,15 +398,13 @@ public class Workshop {
         // - Tijera vence a Papel y Lagarto
         // - Lagarto vence a Spock y Papel
         // - Spock vence a Tijera y Piedra
-
-
         // El método debe retornar un mensaje indicando el resultado del juego.
         // Ejemplo: Si la eleccionUsuario es "Piedra", el resultado podría ser "Ganaste" o "Perdiste" dependiendo de la elección de la computadora.
         return "";
     }
 
-    public String pptls2(String game[]) {
-        //Retornar player ganador o empate
+public String pptls2(String game[]) {
+    //Retornar player ganador o empate
             /*
             Rock = R
             Paper = P
@@ -431,15 +422,21 @@ Paper disproves Spock
 Spock vaporizes Rock
 Rock crushes Scissors
          */
-        return "";
-    }
+    return "";
+}
 
-    public double areaCirculo(double radio) {
-        return 0.0;
+
+
+
+public double areaCirculo(double radio) {
+            if (radio < 0) {
+                throw new IllegalArgumentException("El radio no puede ser negativo");
+            }
+            return 0.0;
     }
 
     public String zoodiac(int day, int month) {
-        return "";
+          return "";
     }
 
 
