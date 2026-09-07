@@ -451,9 +451,35 @@ public double areaCirculo(double radio) {
     }
 
     public String zoodiac(int day, int month) {
-          return "";
+        if (day < 1 || day > 31 || month < 1 || month > 12) {
+            return "Invalid Date";
+        }
+
+        if (month == 2 && day > 29) {
+            return "Invalid Date";
+        }
+        if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) {
+            return "Invalid Date";
+        }
+
+        switch (month) {
+            case 1:  return (day <= 19) ? "Capricornio" : "Acuario";
+            case 2:  return (day <= 18) ? "Acuario" : "Piscis";
+            case 3:  return (day <= 20) ? "Piscis" : "Aries";
+            case 4:  return (day <= 19) ? "Aries" : "Tauro";
+            case 5:  return (day <= 20) ? "Tauro" : "Gemini";
+            case 6:  return (day <= 20) ? "Gemini" : "Cancer";
+            case 7:  return (day <= 22) ? "Cancer" : "Leo";
+            case 8:  return (day <= 22) ? "Leo" : "Virgo";
+            case 9:  return (day <= 22) ? "Virgo" : "Libra";
+            case 10: return (day <= 22) ? "Libra" : "Escorpio";
+            case 11: return (day <= 21) ? "Escorpio" : "Sagitario";
+            case 12: return (day <= 21) ? "Sagitario" : "Capricornio";
+            default: return "Invalid Date";
+        }
     }
-
-
 }
+
+
+
 
