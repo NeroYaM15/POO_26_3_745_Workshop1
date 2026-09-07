@@ -374,19 +374,10 @@ public class Workshop {
     public String convertirAHexadecimal(int numero) {
         // TODO: Implementar el método para convertir un número en su representación hexadecimal.
         // Ejemplo: Si numero = 255, el resultado debería ser "FF".
-            if (numero == 0) {
-                return "0";
-            }
-            String digitos = "0123456789ABCDEF";
-            StringBuilder hexadecimal = new StringBuilder();
-            int n = numero;
-            while (n > 0) {
-                int residuo = n % 16;
-                hexadecimal.insert(0, digitos.charAt(residuo));
-                n = n / 16;
-            }
-            return hexadecimal.toString();
-
+        if (numero < 0) {
+            return "-" + Integer.toHexString(-numero).toUpperCase();
+        }
+        return Integer.toHexString(numero).toUpperCase();
     }
 
     // Método para el juego de piedra, papel, tijera, lagarto, Spock
