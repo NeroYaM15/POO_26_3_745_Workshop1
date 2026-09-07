@@ -290,6 +290,7 @@ public class Workshop {
 
         return limpia.equals(invertida);
 
+
     }
 
     // Método que cuenta el número de palabras en una cadena
